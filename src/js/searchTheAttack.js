@@ -9,8 +9,6 @@ export default (obj, id) => {
 			if (character.description === undefined) {
 				character.description = 'Описание недоступно';
 			}
-
-			delete character.description
 		}
 	});
 

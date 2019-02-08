@@ -38,23 +38,11 @@ const character = {
 describe("TEST: search the attack", () => {
 
 	test("skill id 8", () => {
-		let result = {
-			id: 8,
-			name: 'Двойной выстрел',
-			icon: 'http://...'
-		};
-
-		expect(searchTheAttack(character, 8)).toEqual(result)
+		expect(searchTheAttack(character, 8)).toEqual(character.special[0])
 	});
 
 	test("skill id 13", () => {
-		let result = {
-				id: 13,
-				name: 'Ледяной зонт',
-				icon: 'http://...',
-			};
-
-		expect(searchTheAttack(character, 13)).toEqual(result)
+		expect(searchTheAttack(character, 13)).toEqual(character.special[1])
 	});
 
 	test("skill id 22", () => {
@@ -62,6 +50,7 @@ describe("TEST: search the attack", () => {
 			id: 22,
 			name: 'Щит из стрел',
 			icon: 'http://...',
+			description: "Описание недоступно"
 		};
 
 		expect(searchTheAttack(character, 22)).toEqual(result)
